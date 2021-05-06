@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "highlight.js/styles/tomorrow.css": "./highlightjs/styles/tomorrow.css",
+    "reveal.js": "./revealjs.js",
+    "reveal.js/dist/reveal.css": "./revealjs/dist/reveal.css",
+    "reveal.js/plugin/highlight/highlight.esm.js": "./revealjs/plugin/highlight/highlight.esm.js",
+    "reveal.js/plugin/markdown/markdown.esm.js": "./revealjs/plugin/markdown/markdown.esm.js",
+    "reveal.js/plugin/notes/notes.esm.js": "./revealjs/plugin/notes/notes.esm.js",
+    "reveal.js/plugin/zoom/zoom.esm.js": "./revealjs/plugin/zoom/zoom.esm.js",
+    "xterm": "./xterm.js",
+    "xterm-addon-fit": "./xterm-addon-fit.js",
+    "xterm/css/xterm.css": "./xterm/css/xterm.css"
+  }
+}

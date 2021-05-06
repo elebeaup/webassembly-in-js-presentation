@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WASM in JS</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="./css/app.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" data-type-show="prez">
+				   <section data-markdown="./md/index.md"
+							   data-separator="##==##"
+							   data-separator-vertical="##--##"
+							   data-separator-notes="^Notes:" ></section>
+			</div>
+
+		</div>
+
+		<script type="module">
+			import Reveal from 'reveal.js';
+			import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+			import RevealZoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+			import RevealNotes from 'reveal.js/plugin/notes/notes.esm.js';
+			import RevealHighLight from 'reveal.js/plugin/highlight/highlight.esm.js';
+			import RevealSfeirTheme from './theme/js/sfeir-theme.js';
+			import RevealEmbedTweet from './js/plugins/embed-tweet.js';
+			import RevealTerminal from './js/plugins/terminal.js';
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+				width: 1929,
+				height: 1080,
+				pdfMaxPagesPerSlide: 1,
+				markdown: {
+					smartypants: true
+				},
+				plugins: [
+					// Optional libraries used to extend on reveal.js
+					RevealMarkdown, RevealSfeirTheme, RevealTerminal, RevealZoom, RevealNotes, RevealHighLight, RevealEmbedTweet
+				]
+			}).then(() => {
+				Reveal.configure({
+					theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+					transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+				})
+			});
+		</script>
+
+
+	</body>
+</html>
