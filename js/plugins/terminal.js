@@ -6,7 +6,7 @@ const RevealTerminal = {
         for (let terminalSlideSection of terminalSlides){
             const terminal = document.createElement('iframe');
             terminal.classList.add('terminal');
-            terminal.setAttribute('data-src', 'code/index.html');
+            terminal.setAttribute('data-src', './code/index.html');
 
             terminalSlideSection.insertAdjacentElement('afterbegin', terminal);
         }

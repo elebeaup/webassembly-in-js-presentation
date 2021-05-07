@@ -1,7 +1,7 @@
-<!-- .slide: class="sfeir-basic-slide" data-background="../theme/images/bg-blue-1.jpg" -->
+<!-- .slide: class="sfeir-basic-slide" data-background="./theme/images/bg-blue-1.jpg" -->
 
 <div class="flex full-center">
-  <img class="mb-100" src="../assets/images/WebAssembly_Logo.svg">
+  <img class="mb-100" src="./assets/images/WebAssembly_Logo.svg">
   <h3>WebAssembly in JS</h3>
 </div>
 
@@ -47,11 +47,11 @@
 <h5>https://developer.mozilla.org/fr/docs/WebAssembly/Concepts</h5>
 
 ##==##
-<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="../assets/images/stepan-kulyk-JUI7IAP4cAM-unsplash.jpg" -->
+<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="./assets/images/stepan-kulyk-JUI7IAP4cAM-unsplash.jpg" -->
 # Ne pas casser le web
 
 ##==##
-<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="../assets/images/fly-d-mT7lXZPjk7U-unsplash.jpg" -->
+<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="./assets/images/fly-d-mT7lXZPjk7U-unsplash.jpg" -->
 # Conserver la sécurité
 
 ##==##
@@ -66,7 +66,7 @@
 ##==##
 <!-- .slide: class="full-center" -->
 
-![h-600](./assets/images/../../../assets/images/compiling_to_wasm.png)
+![h-600](./assets/images/compiling_to_wasm.png)
 
 ##==##
 <!-- .slide: class="full-center flex-row p-50" -->
@@ -80,11 +80,11 @@
 ![h-100](./assets/images/TypeScript_Logo.png)
 
 ##==##
-<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="../assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
+<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="./assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
 # Être lisible et débuggable
 
 ##==##
-<!-- .slide: class="with-code" data-background-opacity="0.4" data-background="../assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
+<!-- .slide: class="with-code" data-background-opacity="0.4" data-background="./assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
 
 <div class="full-center">
 
@@ -128,15 +128,15 @@ int add(int a, int b)
 </div>
 
 ##==##
-<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="../assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
+<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="./assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
 # String ?
 
 ##==##
 <!-- .slide: class="flex-row full-center" -->
 # Mémoire linéaire
 
-![h-400](./assets/images/../../../assets/images/string_to_wasm_1.png)
-![h-400](./assets/images/../../../assets/images/string_to_wasm_2.png)
+![h-400](./assets/images/string_to_wasm_1.png)
+![h-400](./assets/images/string_to_wasm_2.png)
 
 
 ##==##
