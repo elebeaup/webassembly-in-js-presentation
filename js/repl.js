@@ -84,7 +84,7 @@ class Repl {
 
   _completeHandler(input) {
     const pointPosition = input.lastIndexOf('.');
-    const startExpressionMatcher = input.match(/[^[a-z0-9\.]/gi);
+    const startExpressionMatcher = input.match(/[^[a-z0-9\._]/gi);
     const startExpression = startExpressionMatcher ? input.lastIndexOf(startExpressionMatcher[startExpressionMatcher.length - 1]) : -1;
     let scope = window;
     let tokens = pointPosition === -1 ? [] : input.substring(startExpression + 1, pointPosition).split('.');
