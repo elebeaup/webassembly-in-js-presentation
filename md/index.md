@@ -41,6 +41,12 @@
 > -- <cite>wikipedia</cite>
 
 ##==##
+<!-- .slide: class="full-center" -->
+
+![h-600](./assets/images/compiling_to_wasm.png)
+
+##==##
+
 <!-- .slide: class="transition" -->
 # Les promesses
 
@@ -64,11 +70,6 @@
 ![h-600](./assets/images/caniuse.png)
 
 ##==##
-<!-- .slide: class="full-center" -->
-
-![h-600](./assets/images/compiling_to_wasm.png)
-
-##==##
 <!-- .slide: class="full-center flex-row p-50" -->
 
 ![h-300](./assets/images/C_Logo.svg)
@@ -77,7 +78,7 @@
 ![h-200](./assets/images/Go_Logo.svg)
 ![h-200](./assets/images/Java_Logo.svg)
 ![h-200](./assets/images/Rust_Logo.svg)
-![h-100](./assets/images/TypeScript_Logo.png)
+![h-100](./assets/images/AssemblyScript_Logo.png)
 
 ##==##
 <!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="./assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
@@ -132,6 +133,29 @@ int add(int a, int b)
 # String ?
 
 ##==##
+<!-- .slide: class="with-code" data-background-opacity="0.4" data-background="./assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
+
+<div class="full-center">
+
+```c
+char *reverse(char *str)
+{
+    ...
+}
+```
+
+# 
+
+```
+(func $reverse (type $t0) (param $p0 i32) (result i32)
+...
+```
+<!-- .element: class="fragment" -->
+
+</div>
+
+##==##
+
 <!-- .slide: class="flex-row full-center" -->
 # Mémoire linéaire
 
@@ -224,10 +248,28 @@ EMSCRIPTEN_KEEPALIVE char *reverse(char *str)
 }
 ```
 
+```js
+const importObject = {
+  env: {
+    log_value: (strPtr) => {
+      console.log(readStringToMemory(strPtr)); 
+    }
+  }
+};
+
+const { instance } = await WebAssembly.instantiateStreaming(fetch('lib.wasm'), importObject);
+}
+```
+<!-- .element: class="fragment" -->
+
 </div>
 
 ##==##
 <!-- .slide: class="terminal" data-background="#a0a0ff" -->
+
+##==##
+<!-- .slide: class="transition underline" data-background-opacity="0.8" data-background="./assets/images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg" -->
+# Embind
 
 ##==##
 
@@ -302,6 +344,25 @@ Firefox | JS | 8301 |
 #  
 
 _The score is the total benchmark time. The lower the score, the better._
+
+##==##
+<!-- .slide: class="speaker-slide blue" -->
+
+![speaker](./assets/images/emmanuel_lebeaupin.jpg)
+![company](./assets/images/logo-sfeir-blanc.png)
+
+<h2> Emmanuel<span> Lebeaupin</span></h2>
+
+### Développeur Fullstack
+<!-- .element: class="icon-rule icon-first" -->
+
+### @elebeaup
+<!-- .element: class="icon-twitter icon-second" -->
+
+##==##
+<!-- .slide: class="transition" -->
+
+# Merci
 
 ##==##
 
