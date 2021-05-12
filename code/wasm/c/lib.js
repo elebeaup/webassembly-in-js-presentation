@@ -11,8 +11,7 @@ class LibModule {
       },
     };
 
-    const wasmModule = await WebAssembly.compileStreaming(fetch('./wasm/c/lib.wasm'));
-    const instance = await WebAssembly.instantiate(wasmModule, importObject);
+    const { instance } = await WebAssembly.instantiateStreaming(fetch('./wasm/c/lib.wasm'), importObject);
     const heap8 = new Uint8Array(instance.exports.memory.buffer);
     
     this.instance = instance;
@@ -21,17 +20,19 @@ class LibModule {
     return {
       readStringToMemory: this.readStringToMemory,
       writeStringToMemory: this.writeStringToMemory,
-      add: instance.exports.add,
-      reverse: instance.exports.reverse,
-      print: instance.exports.print,
-      malloc: instance.exports.malloc,
-      free: instance.exports.free,
+      exports: {
+        add: instance.exports.add,
+        reverse: instance.exports.reverse,
+        print: instance.exports.print,
+        free: instance.exports.free,
+        malloc: instance.exports.malloc
+      },
       heap8
     }
   }
 
   writeStringToMemory(str) {
-    const { malloc, heap8 } = this;
+    const { exports: { malloc }, heap8 } = this;
 
     const encodedStr = utf8Encoder.encode(str);
     const strPtr = malloc(encodedStr.length + 1);

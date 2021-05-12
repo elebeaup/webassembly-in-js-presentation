@@ -70,7 +70,7 @@ class FakeTerminal {
     if (event.ctrlKey && event.code === 'KeyL') {
       term.write(`${ESC}c`); // Clear Screen
       this._printPrompt(term);
-      this.input = '';
+      this._input = '';
     }
   }
 
